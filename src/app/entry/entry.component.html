@@ -1,3 +1,83 @@
-<p>
-  entry works!
-</p>
+<table>
+  <tr>
+      <td>
+          <p>
+              Frage:
+          </p>
+      </td>
+      <td>
+          <p>
+              {{entry.strQuestion}}
+          </p>
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <p>
+              Zeit:
+          </p>
+      </td>
+      <td>
+          <p>
+              {{this.timeRemaining}}
+          </p>
+      </td>
+  </tr>
+  <tr>
+      <td colspan="2">
+          <input (keydown.enter)="sendGuess(guess.value)" #guess >
+          <input type="button" value="ABSCHICKEN!" (click)="sendGuess(guess.value)">
+      </td>
+  </tr>
+  <tr>
+      <td><p>Lösung:</p></td>
+      <td>
+          <p id="answer">
+              {{entry.kAnswer}}
+          </p>
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <p>
+              Genauigkeit:
+          </p>
+      </td>
+      <td>
+          <p>
+              {{this.percentage}}
+          </p>
+      </td>
+  </tr>
+  <!--<tr>
+      <td>
+          <p>
+              Geschwindigkeit:
+          </p>
+      </td>
+      <td>
+          <p>
+              
+          </p>
+      </td>
+  </tr>-->
+  <tr>
+      <td>
+          <p>
+              Punkte:
+          </p>
+      </td>
+      <td>
+          <p>
+              {{this.score}}
+          </p>
+      </td>
+  </tr>
+  <tr>
+      <td colspan="2">
+          <p>
+              {{this.errMsg}}
+          </p>
+      </td>
+  </tr>
+</table>

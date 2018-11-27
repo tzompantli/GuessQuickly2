@@ -1,3 +1,7 @@
-<p>
-  game works!
-</p>
+<!--<app-user>User works</app-user>-->
+<app-user [user]="users[0]"></app-user>
+<app-entry [entry]="currentEntry" (changeScoreEvent)="onScoreChanged($event)"></app-entry>
+<br>
+<div class="form">
+    <button (click)="getRandomMathEntry('mult')">N&Auml;CHSTER EINTRAG!</button>
+</div>

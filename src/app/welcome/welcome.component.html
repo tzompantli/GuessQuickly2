@@ -1,3 +1,23 @@
-<p>
-  welcome works!
-</p>
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:left">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<h3>M&ouml;chtest du an einem Spiel teilnehmen oder ein neues Spiel starten?</h3>
+<div class="welcome">  
+  <table>
+    <!--<tr>
+      <td>Teilnehmen:</td>
+      <td><input name="preselection" type="radio"/></td>
+    </tr>-->
+    <tr>
+      <td>Neues Spiel starten:</td>
+      <td><input #startGame name="preselection" type="checkbox" (change)="selectOrCreateGame(startGame.checked)"/></td>
+      <!--<td><input #startGame (change)="openGameCreator()" name="preselection" type="radio"/></td>-->
+    </tr>
+  </table>
+  <!--<input type="button" value="Weiter!" (click)="selectOrCreateGame(startGame.checked)"/>-->
+  <app-game-creator></app-game-creator>
+  <app-games-panel></app-games-panel>
+</div>
